@@ -1,4 +1,3 @@
-
 import requests
 from requests.auth import HTTPBasicAuth
 import json
@@ -6,9 +5,10 @@ import json
 url = "https://pavanakumarn89.atlassian.net/rest/api/3/issue"
 
 email="pavankumarn89@gmail.com"
-API_Token="ATATT3xFfGF080ZMVmLtouWw7-Dlx_MGEfEAqY6l3TMD4g0KllUwhPTVl2ArxcaknHg3P3WwqhngQt4SnSbXN3W_EfeFmDdQhuZtT6tofwMXC8k98X5hNRNohUTtP1xydwOuEmjVZoHKRjzFKCLCWPm38D4SrAwn9841EKMdHYsb554MzhDebOA=56D411B5"
 
-auth = HTTPBasicAuth(email , API_Token)
+API_TOKEN="ATATT3xFfGF080ZMVmLtouWw7-Dlx_MGEfEAqY6l3TMD4g0KllUwhPTVl2ArxcaknHg3P3WwqhngQt4SnSbXN3W_EfeFmDdQhuZtT6tofwMXC8k98X5hNRNohUTtP1xydwOuEmjVZoHKRjzFKCLCWPm38D4SrAwn9841EKMdHYsb554MzhDebOA=56D411B5"
+
+auth = HTTPBasicAuth(email , API_TOKEN)
 
 headers = {
   "Accept": "application/json",
@@ -22,7 +22,7 @@ payload = json.dumps( {
         {
           "content": [
             {
-              "text": "My first Jira ticket",
+              "text": "My first jira ticket",
               "type": "text"
             }
           ],
@@ -32,13 +32,13 @@ payload = json.dumps( {
       "type": "doc",
       "version": 1
     },
-    "issuetype": {
-      "id": "10008"
-    },    
     "project": {
       "key": "PN"
     },
-    "summary": "First Jira Ticket",
+    "issuetype": {
+      "id": "10008"
+    },
+    "summary": "First JIRA Ticket",
   },
   "update": {}
 } )
